@@ -1,0 +1,11 @@
+.ButtonNav {
+  width: 250px;
+  line-height: 50px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+  background: #7876e6;
+  color: #FFFFFF;
+  text-decoration:  none;
+}
