@@ -1,9 +1,21 @@
-.signup{
+.makeevent{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15%;
-  
+  gap: 5%
+}
+.form-makeevent{
+  width: 388px;
+  height: 400px;
+  left: 851px;
+  top: 153px;
+
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 input{
@@ -20,25 +32,29 @@ input{
   letter-spacing: 0.03em;
 }
 
-.input-form-reg{
-  width: 388px;
-  height: 500px;
-  left: 851px;
-  top: 153px;
-
-  background: #FFFFFF;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
-  align-items: center;
+.leftside{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.sign-button-class{
-  margin-top: 25px;
+.addpic{
+  margin-top: 2rem;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+  background: #7876e6;
+  color: #FFFFFF;
+  text-decoration:  none;
+  font-size: 16px;
 }
 
-.signup-button{
+.createbutton{
+  margin-top: 2rem;
   width: 250px;
   height: 50px;
   line-height: 50px;
@@ -49,9 +65,5 @@ input{
   background: #7876e6;
   color: #FFFFFF;
   text-decoration:  none;
-  font-size: 18px;
-}
-
-.Do-have-account{
   font-size: 18px;
 }

@@ -19,7 +19,7 @@ export const Home = (params: IHome) => {
                 средств. Теперь не нужно миллионов чатов в социальных сетях, а
                 все благодаря Foedus
               </p>
-              <ButtonNav link={"/event"} className={"makeevent"} text={"Попробовать"} />
+              <ButtonNav link={"/makeevent"} className={"makeevent"} text={"Попробовать"} />
             </div>
           </div>
           <div className="media-content">

@@ -2,42 +2,116 @@ import pic from "../../../assets/images/auth-pic.png"
 import "../styles/SignUp.css"
 import { Input } from "../../../ui/imputLog/organoids/Input";
 import { NavLink } from "react-router-dom";
+import { InSignUp, IInSignUp } from "../logics/InSignUp";
+import { useState } from "react";
 
 interface ISignUp {
   id: number;
 }
 export const SignUp = (params: ISignUp) => {
+  
+  const [value, setValue] = useState<IInSignUp>({
+    email: "",
+    password: "",
+    name: "",
+    lastname: "",
+  });
+
+  const handleClick = async () => {
+    try {
+      await InSignUp(value);
+    } catch (error) {
+      console.log("Такой аккаунт уже существует", error);
+    }
+  };
+
   return (
     <div className="signup">
       <div className="left-side">
         <img className="pic" src={pic} alt="картинка" />
       </div>
       <div className="'right-side">
-        <div className="input-form-reg">
+        <form 
+          className="input-form-reg" 
+          onSubmit={(e) => {
+          e.preventDefault();
+          handleClick();
+          }}
+        >
           <div className="Name">
-            <Input className={"inp"} placeholder={"Имя"}/>
+            <input
+                minLength={1}
+                required
+                maxLength={20}
+                type="text"
+                placeholder={"Имя"}
+                value={value.name}
+                onChange={(event: any) => {
+                  setValue({ ...value, name: event.target.value });
+                }}
+              />
           </div>
           <div className="LastName">
-          <Input className={"inp"} placeholder={"Фамилия"}/>
+            <input
+                minLength={1}
+                required
+                maxLength={20}
+                type="text"
+                placeholder={"Фамилия"}
+                value={value.lastname}
+                onChange={(event: any) => {
+                  setValue({ ...value, lastname: event.target.value });
+                }}
+              />
           </div>
           <div className="Email">
-          <Input className={"inp"} placeholder={"Email"}/>
+            <input
+                minLength={1}
+                required
+                maxLength={20}
+                type="email"
+                placeholder={"Email"}
+                value={value.email}
+                onChange={(event: any) => {
+                  setValue({ ...value, email: event.target.value });
+                }}
+              />
           </div> 
           <div className="password">
-          <Input className={"inp"} placeholder={"Пароль"}/>
+            <input
+                minLength={1}
+                required
+                maxLength={20}
+                type="password"
+                placeholder={"Пароль"}
+                value={value.password}
+                onChange={(event: any) => {
+                  setValue({ ...value, password: event.target.value });
+                }}
+              />
           </div> 
           <div className="password">
-          <Input className={"inp"} placeholder={"Повторите пароль"}/>
-          </div> 
+            <input
+                  minLength={1}
+                  required
+                  maxLength={20}
+                  type="password"
+                  placeholder={"Пароль"}
+                  value={value.password}
+                  onChange={(event: any) => {
+                    setValue({ ...value, password: event.target.value });
+                  }}
+                />
+          </div>
           <div className="sign-button-class">
-            <button className="signup-button">Зарегистрироваться</button>
+            <input type="submit" className="login-button" value={"Войти"} />
           </div>
           <div>
             <NavLink to={"/login"} className="Do-have-account">
               У вас уже есть учетная запись?
             </NavLink>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   )

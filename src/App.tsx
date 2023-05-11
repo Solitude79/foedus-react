@@ -5,6 +5,8 @@ import "./index.css";
 import { Route, Routes } from "react-router-dom";
 import { Login } from "./common/pages/login/organoids/Login";
 import { SignUp } from "./common/pages/signup/organoids/SignUp";
+import { Footer } from "./common/pages/footer/organoids/Footer";
+import { MakeEvent } from "./common/pages/CreateEvent/organoids/MakeEvent";
 
 function App() {
   return (
@@ -15,9 +17,10 @@ function App() {
           <Route path="/" element={<Home id={1} />}></Route>
           <Route path="/login" element={<Login id={2}/>}></Route>
           <Route path="/reg" element={<SignUp id={3}/>}></Route>
+          <Route path="/makeevent" element={<MakeEvent/>}></Route>
         </Routes>
       </div>
-      {/* Footer */}
+      <Footer/>
     </div>
   );
 }
