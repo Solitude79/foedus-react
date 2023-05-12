@@ -11,10 +11,8 @@ export const InLogin = async (params: IInLogin) => {
       email: params.email,
       password: params.password,
     })
-    .then((res: any) => {
-      if (res.data.token) {
-        setAccessToken(res.data.token);
-      }
+    .then(() => {
+      setAccessToken("true");
     })
     .catch((error: any) => {
       throw new Error(error.response.data.message);

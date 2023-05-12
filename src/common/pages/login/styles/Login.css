@@ -20,7 +20,7 @@ input{
   letter-spacing: 0.03em;
 }
 
-.imput-form{
+.Login__Form{
   width: 388px;
   height: 300px;
   left: 851px;
@@ -29,11 +29,6 @@ input{
   background: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
-}
-
-.log-button-class{
-  margin-top: 25px;
-  margin-left: 120px;
 }
 
 .login-button{

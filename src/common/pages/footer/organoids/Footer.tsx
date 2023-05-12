@@ -5,6 +5,7 @@ interface IFooter {
 export const Footer = (params: IFooter) => {
   return (
     <div className="foedus-footer">
+      <hr className="foedus-footer-startline" />
       <div className="footer-items">
         <div className="footer-item">
           <div className="head">ПРОЕКТЫ</div>
@@ -37,7 +38,7 @@ export const Footer = (params: IFooter) => {
           </div>
         </div>
       </div>
-      <hr className="footer-line" />
+      <hr className="foedus-footer-endline" />
       <div className="footer-bottom-info">
         <div className="contacts">
           <div className="phone">Email: foedus@email.ru</div>

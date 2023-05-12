@@ -4,21 +4,20 @@ import { axiosInstance } from "../../../config/axiosInstance";
 export interface IInSignUp {
   email: string;
   password: string;
-  name: string;
-  lastname: string;
+  firstName: string;
+  lastName: string;
 }
+
 export const InSignUp = async (params: IInSignUp) => {
   return axiosInstance
     .post("/auth/reg", {
       email: params.email,
       password: params.password,
-      name: params.name,
-      lastname: params.lastname
+      firstName: params.firstName,
+      lastName: params.lastName,
     })
     .then((res: any) => {
-      if (res.data.token) {
-        setAccessToken(res.data.token);
-      }
+      setAccessToken("true");
     })
     .catch((error: any) => {
       throw new Error(error.response.data.message);

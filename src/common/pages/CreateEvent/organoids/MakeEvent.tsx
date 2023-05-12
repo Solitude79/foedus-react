@@ -1,32 +1,50 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import nophoto from "../../../assets/images/icons/noimage.png"
-import "../styles/MakeEvent.css"
+import nophoto from "../../../assets/images/icons/noimage.png";
+import "../styles/MakeEvent.css";
 
-interface IMakeEvent {
-}
-export const MakeEvent = (params: IMakeEvent) => {
+export const MakeEvent = () => {
   return (
     <div className="makeevent">
       <div className="leftside">
-        <img src={nophoto} alt="нет картинки" className="nophoto"/>
+        <img src={nophoto} alt="нет картинки" className="nophoto" />
         <button className="addpic">Добавить фото</button>
       </div>
       <div className="rightside">
         <form className="form-makeevent">
           <div className="name">
-            <input type="text" placeholder="Название" />          
+            <input
+              required
+              className="name-input"
+              type="text"
+              placeholder="Название"
+            />
           </div>
           <div className="date">
-            <input type="date" placeholder="Дата"/>
+            <input
+              required
+              type="date"
+              placeholder="Дата"
+              className="date-input"
+            />
           </div>
           <div className="description">
-            <input type="text" placeholder="Описание"/>
+            <input
+              required
+              className="description-input"
+              type="text"
+              placeholder="Описание"
+            />
           </div>
           <div className="adress">
-            <input type="text" placeholder="Адрес"/>
+            <input
+              required
+              className="adress-input"
+              type="text"
+              placeholder="Адрес"
+            />
           </div>
-          <input type="submit" className="createbutton" value={"Создать"}/>
+          <input type="submit" className="createbutton" value={"Создать"} />
         </form>
       </div>
     </div>

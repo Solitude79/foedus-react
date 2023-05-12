@@ -1,62 +1,62 @@
 import logo from "../../../assets/images/logo.png";
-import profile_icon from "../../../assets/images/profile-icon.png";
+import profile_icon from "../../../assets/images/profile-icon.svg";
 import { ButtonNav } from "../../../ui/buttonNav/organoids/ButtonNav";
 import { NavLink } from "react-router-dom";
 import "../styles/Header.css";
 import { $accessToken } from "../../../config/accessToken";
 import { useStore } from "effector-react";
+import { $userValue } from "../../../config/UserHooks";
+import { useEffect } from "react";
 
 interface IHeader {}
 export const Header = (params: IHeader) => {
   const accessToken = useStore($accessToken);
+  const userValue = useStore($userValue);
   return (
-    <div className="Header">
-      {accessToken ? (
-        <div className="content">
-          <div className="brand">
-            <NavLink to={"/"}>
-              <img className="logo" src={logo} alt="логотип" />
-            </NavLink>
-          </div>
-          <div className="right-side">
-            <div className="button">
+    <div className="Header__General">
+      <div className="Header">
+        <div className="Header__Content">
+          <NavLink to={"/"}>
+            <img className="Header__Content__Logo" src={logo} alt="логотип" />
+          </NavLink>
+          {accessToken ? (
+            <div className="Header__Content__Right">
               <ButtonNav
                 link={"/makeevent"}
-                className={"makeevent"}
+                className={"Header__Content__Right__Button"}
                 text={"Создать проект"}
               />
+              <NavLink
+                className="Header__Content__Right__Profile"
+                to={"/profile"}
+              >
+                <div className="Header__Content__Right__Profile__Name">
+                  {userValue.firstName}
+                </div>
+                <img
+                  className="Header__Content__Right__Profile__Icon"
+                  src={profile_icon}
+                  alt="иконка"
+                />
+              </NavLink>
             </div>
-            <div className="profile-icon">
-              <img className="icon" src={profile_icon} alt="иконка" />
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div className="content">
-          <div className="brand">
-            <NavLink to={"/"}>
-              <img className="logo" src={logo} alt="логотип" />
-            </NavLink>
-          </div>
-          <div className="right-side">
-            <div className="button">
+          ) : (
+            <div className="Header__Content__Right">
               <ButtonNav
                 link={"/makeevent"}
-                className={"makeevent"}
+                className={"Header__Content__Right__Button"}
                 text={"Создать проект"}
               />
-            </div>
-            <div className="button">
               <ButtonNav
                 link={"/login"}
-                className={"makeevent"}
+                className={"Header__Content__Right__Button"}
                 text={"Авторизоваться"}
               />
             </div>
-          </div>
+          )}
         </div>
-      )}
-      <hr className="header-line" />
+        <div className="Header_Line"></div>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,71 @@
+.Profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Profile_Avatar {
+}
+.Profile__UserInfo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.Profile__UserInfo__Name {
+  margin-top: 2vh;
+  font-family: Roboto;
+  font-size: 22px;
+}
+.Profile__UserInfo__Email {
+  font-family: Roboto;
+  font-size: 18px;
+}
+.Profile_Logout {
+  margin-top: 2vh;
+  width: 80px;
+  height: 37px;
+  line-height: 50px;
+  font-family: Roboto;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+  background: #7876e6;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.Profile_Logout:hover {
+  background: #ffffff;
+  color: #000;
+}
+.Profile__Events__Choice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 135px;
+  gap: 55px;
+}
+.Profile__Events__Choice__Item {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  height: 90px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-bottom: 5px solid transparent;
+}
+.Profile__Events__Choice__Item__Choices {
+  border-bottom: 5px solid #ffd280;
+}
