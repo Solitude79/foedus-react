@@ -13,27 +13,26 @@ import { useEffect } from "react";
 import { accessTokenName } from "./common/config/axiosInstance";
 import { InUser, setUserValue } from "./common/config/UserHooks";
 import { Profile } from "./common/pages/profile/organoids/Profile";
+import { Event } from "./common/pages/Event/organoids/Event";
+import { EditEvent } from "./common/pages/EditEvent/organoids/EditEvent";
 
-export async function requestUser()  {
+export async function requestUser() {
   try {
     let result = await InUser();
     if (result) {
-      setUserValue(result)
+      setUserValue(result);
     }
-  } catch {
-
-  }
+  } catch {}
 }
 
 export function App() {
   const accessToken = useStore($accessToken);
   useEffect(() => {
     if (localStorage.getItem(accessTokenName)?.length) {
-      setAccessToken(localStorage.getItem(accessTokenName) || "")
+      setAccessToken(localStorage.getItem(accessTokenName) || "");
     } else {
-
     }
-  }, [])
+  }, []);
   return (
     <div className="App">
       <Header />
@@ -42,7 +41,9 @@ export function App() {
           {accessToken ? (
             <>
               <Route path="/makeevent" element={<MakeEvent />}></Route>
-              <Route path="/profile" element={< Profile/>}></Route>
+              <Route path="/profile" element={<Profile />}></Route>
+              <Route path="/event/:id" element={<Event />}></Route>
+              <Route path="/editevent/:id" element={<EditEvent />}></Route>
               <Route path="/" element={<Home />}></Route>
               <Route path="" element={<Home />}></Route>
             </>

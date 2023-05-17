@@ -12,7 +12,7 @@
 .App__Actual {
   max-width: 1173px;
   width: 100%;
-  padding-top: 40px;
+  padding-top: 20px;
   min-height: 80vh;
   box-sizing: border-box;
 }

@@ -1,0 +1,28 @@
+.Event__Card {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+  font-size: 18px;
+  font-family: Roboto;
+  cursor: pointer;
+}
+.Event__Cards {
+  width: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.Event__Card:hover {
+  background: #7876e6;
+  color: white;
+}
+

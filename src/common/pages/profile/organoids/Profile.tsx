@@ -22,6 +22,7 @@ export const Profile = (params: IProfile) => {
           src={avatar}
           alt="аватар"
           width="250px"
+          
         />
         <div className="Profile__UserInfo__Name">
           {userValue.firstName} {userValue.lastName}

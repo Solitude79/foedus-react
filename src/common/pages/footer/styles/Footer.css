@@ -27,6 +27,7 @@
   align-items: flex-start;
 }
 
+
 .footer-bottom-info {
   display: flex;
   justify-content: center;
@@ -81,6 +82,9 @@
   mix-blend-mode: normal;
   opacity: 0.7;
   text-decoration: none;
+}
+.ref:hover {
+  color: #7876e6;
 }
 
 .head {

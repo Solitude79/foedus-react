@@ -1,0 +1,137 @@
+.Event{
+}
+.Event__Image{
+  border-radius: 20px;
+}
+.Event__Content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5%;
+  margin-right: 10vh;
+}
+.Event__Block{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.Event__Line{
+  background: black;
+  height: 1px;
+  width: 100%;
+  opacity: 0.3;
+}
+.Event__Block__Title{
+  font-family: Podkova;
+  font-weight: 800;
+  font-size: 35px;
+  margin-bottom: 1vh;
+  text-align: left;
+}
+.Event__Block__Description{
+  font-family: Roboto;
+  font-size: 24px;
+  text-align: left;
+}
+.Event__Block__Description__Title{
+  display: inline;
+  font-weight: 550;
+}
+.Event__Block__Adress{
+  font-family: Roboto;
+  font-size: 24px;
+  text-align: left;
+}
+.Event__Block__Address__Title{
+  display: inline;
+  font-weight: 550;
+}
+.Event__Block__Date{
+  font-family: Roboto;
+  font-size: 24px;
+  text-align: left;
+}
+.Event__Block__Date__Title{
+  display: inline;
+  font-weight: 550;
+}
+.Event__Ideas__Create{
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3vh;
+  gap: 2vh;
+}
+.Create__Idea__Button{
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid;
+  border-color: black;
+  box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+  background: #7876e6;
+  color: #FFFFFF;
+  text-decoration:  none;
+  font-family: Roboto;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Create__Idea__Button:hover {
+  background: #ffd280;
+  color: #000;
+}
+.Event__Content__Buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+  margin-top: 2vh;
+}
+.Event__Content__Buttons__Edit{
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid;
+  border-color: black;
+  box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+  background: #7876e6;
+  color: #FFFFFF;
+  text-decoration:  none;
+  font-family: Roboto;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Event__Content__Buttons__Edit:hover {
+  background: #ffd280;
+  color: #000;
+}
+.Event__Content__Buttons__Delete{
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid;
+  border-color: black;
+  box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+  background: #7876e6;
+  color: #FFFFFF;
+  text-decoration:  none;
+  font-family: Roboto;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Event__Content__Buttons__Delete:hover {
+  background: #ffd280;
+  color: #000;
+}

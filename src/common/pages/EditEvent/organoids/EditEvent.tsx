@@ -1,40 +1,55 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import nophoto from "../../../assets/images/icons/noimage.png";
-import "../styles/MakeEvent.css";
-import { InMakeEvent, IInMakeEvent } from "../logics/InMakeEvent";
+import { InEditEvent, IInEditEvent } from "../logics/InEditEvent";
+import "../styles/EditEvent.css"
 
-export const MakeEvent = () => {
+export const EditEvent = () => {
   const navigate = useNavigate();
-  const [value, setValue] = useState<IInMakeEvent>({
+  const [id, setId] = useState<any>();
+  useEffect(() => {
+    if (id) {
+      setValue({...value, eventId: id})
+    }
+  }, [id]);
+  useEffect(() => {
+    setId(window.location.pathname.split("/editevent/:")[1]);
+  }, []);
+  const [value, setValue] = useState<IInEditEvent>({
+    eventId: id,
     title: "",
     deadline: "",
     address: "",
     description: ""
   });
+  
   const handleClick = async () => {
     try {
-      await InMakeEvent(value);
-      navigate("/profile");
-    } catch (error) {
+      const result = await InEditEvent(value);
+      if(result){
+        navigate(`/profile`)
+      }
+    } 
+    catch (error) {
+      console.log(error);
     }
   };
   useEffect(() => {
     console.log("value", value);
   }, [value]);
   return (
-    <div className="MakeEvent">
-      <div className="MakeEvent__Image">
+    <div className="EditEvent">
+      <div className="EditEvent__Image">
         <img src={nophoto} alt="нет картинки" className="nophoto"  width="600px"/>
-        <button className="MakeEvent__AddPic__Button">Добавить фото</button>
+        <button className="EditEvent__AddPic__Button">Добавить фото</button>
       </div>
-      <form className="MakeEvent__Form" 
+      <form className="EditEvent__Form" 
           onSubmit={(e) => {
           e.preventDefault();
           handleClick();
         }}
       >
-        <div className="MakeEvent__Input__Contaiter">
+        <div className="EditEvent__Input__Contaiter">
           <input
             required
             className="name-input"
@@ -75,7 +90,7 @@ export const MakeEvent = () => {
               setValue({ ...value, address: event.target.value });
             }}
           />
-          <input type="submit" className="MakeEvent__CreateEvent__Button" value={"Создать"} />
+          <input type="submit" className="EditEvent__CreateEvent__Button" value={"Сохранить"} />
         </div>
       </form>
     </div>

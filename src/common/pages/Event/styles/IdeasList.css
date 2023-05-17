@@ -1,0 +1,86 @@
+.Ideas__Card{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  margin-bottom: 5vh;
+}
+.Idea__Card{
+  width: 60%;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50%;
+  align-items: center;
+  background-color: hsla(0, 0%, 100%, 0.4);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+  font-size: 18px;
+  font-family: Roboto;
+}
+.Idea__Card__Info{
+  margin-left: 5vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.Idea__Card__ChatButton{
+  margin-right: 5vh;
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid;
+  border-color: black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+  background: #7876e6;
+  color: #FFFFFF;
+  text-decoration:  none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Idea__Card__Info__Title{
+  font-family: Podkova;
+  font-size: 25px;
+  font-weight: 800;
+  display: inline;
+  text-align: left;
+}
+.Idea__Card__Info__Description{
+  font-family: Roboto;
+  font-size: 18px;
+  display: inline;
+  text-align: left;
+}
+.Idea__Card__Info__Deadline{
+  font-family: Roboto;
+  font-size: 18px;
+  display: inline; 
+  text-align: left; 
+}
+.Idea__Card__Info__Money{
+  font-family: Roboto;
+  font-size: 18px;
+  display: inline; 
+  text-align: left;  
+}
+.Idea__Card__Info__Description__Title{
+  display: inline;
+  font-weight: 550;
+}
+.Idea__Card__Info__Deadline__Title{
+  display: inline;
+  font-weight: 550;
+}
+.Idea__Card__Info__Money__Title{
+  display: inline;
+  font-weight: 550;
+}

@@ -36,6 +36,16 @@
 .Header__Content__Right__Button {
   width: 140px;
   height: 46px;
+  font-size: 15px;
+  margin-top: 0.4vh;
+  font-family: Roboto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Header__Content__Right__Button:hover {
+  background: #ffd280;
+  color: #000;
 }
 .Header__Content__Right__Profile {
   display: flex;

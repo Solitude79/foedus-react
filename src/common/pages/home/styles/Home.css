@@ -37,6 +37,10 @@
 }
 .Home__Block__Button {
 }
+.Home__Block__Button:hover {
+  background: #ffd280;
+  color: #000;
+}
 .Home__Image {
   width: 720px;
   height: 100%;
